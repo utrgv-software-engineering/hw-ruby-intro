@@ -100,6 +100,12 @@ of 20 should format as "$20.00" and a price of 33.8 should format as
 
 You can check your progress on the all the above by running `rspec spec/part3_spec.rb`.
 
+# 4. Submission
+
+1. Clone this repo on codio or on your computer and complete the required functions/classes.
+2. Commit and push your solutions to GitHub (make sure you pass all the tests before you do), double check your repo on GitHub and verify the commit went through.
+3. Submit a message in Blackboard telling me you are done with the assignment, e.g. "Assignment Done"
+
 ## More Challenges
 
 * Try getting setup with 
