@@ -104,7 +104,8 @@ You can check your progress on the all the above by running `rspec spec/part3_sp
 
 1. Clone this repo on codio or on your computer and complete the required functions/classes.
 2. Commit and push your solutions to GitHub (make sure you pass all the tests before you do), double check your repo on GitHub and verify the commit went through.
-3. Submit a message in Blackboard telling me you are done with the assignment, e.g. "Assignment Done"
+3. Submit a picture(s) of your 3 parts passing the RSpec tests!
+
 
 ## More Challenges
 
