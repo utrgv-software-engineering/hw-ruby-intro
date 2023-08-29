@@ -1,4 +1,4 @@
-# When done, submit this entire file to the autograder.
+# When done, commit to Github and watch the autograder run the rspec tests.
 
 # Part 1
 
