@@ -13,6 +13,7 @@ After completing this assignment, you will know how to:
 * Understand the Ruby project conventions for where code files and test files are located in a project's directory hierarchy
 * Run individual tests or suites of tests using the RSpec unit testing tool
 * Understand the basic syntax of RSpec unit tests
+* Understand debugging with the byebug gem
  
 Overview
 --------
@@ -53,7 +54,7 @@ run `rspec` from the command line to test your code.
 
 # 1. Arrays, Hashes, and Enumerables
 
-Check the [Ruby 2.x documentation](http://ruby-doc.org) on `Array`,
+Check the [Ruby 3.x documentation](http://ruby-doc.org) on `Array`,
 `Hash` and `Enumerable` as they could help tremendously with these
 exercises. :-) 
 

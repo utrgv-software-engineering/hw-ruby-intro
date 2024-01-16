@@ -1,3 +1,6 @@
+# Name: 
+# Date: 
+
 # When done, commit to Github and watch the autograder run the rspec tests. (Check Actions if you do not see a checkmark or X on your repo).
 # IMPORTANT! Codespaces is a virtual machine separate from the repo, anything done in Codespaces does not show on the repo until you commit and push your code.
 
