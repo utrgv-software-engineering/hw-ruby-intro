@@ -1,0 +1,48 @@
+name: Autograding Tests
+'on':
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Part 3
+      id: part-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Part 3
+        setup-command: sudo gem install bundler && sudo bundle install
+        command: rspec spec/part3_spec.rb
+        timeout: 10
+    - name: Part 1
+      id: part-1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Part 1
+        setup-command: sudo gem install bundler && sudo bundle install
+        command: rspec spec/part1_spec.rb
+        timeout: 10
+        max-score: 30
+    - name: Part 2
+      id: part-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Part 2
+        setup-command: sudo gem install bundler && sudo bundle install
+        command: rspec spec/part2_spec.rb
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PART-3_RESULTS: "${{steps.part-3.outputs.result}}"
+        PART-1_RESULTS: "${{steps.part-1.outputs.result}}"
+        PART-2_RESULTS: "${{steps.part-2.outputs.result}}"
+      with:
+        runners: part-3,part-1,part-2
