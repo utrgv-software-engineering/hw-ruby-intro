@@ -13,14 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Part 3
-      id: part-3
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: Part 3
-        setup-command: sudo gem install bundler && sudo bundle install
-        command: rspec spec/part3_spec.rb
-        timeout: 10
     - name: Part 1
       id: part-1
       uses: classroom-resources/autograding-command-grader@v1
@@ -38,11 +30,19 @@ jobs:
         setup-command: sudo gem install bundler && sudo bundle install
         command: rspec spec/part2_spec.rb
         timeout: 10
+    - name: Part 3
+      id: part-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Part 3
+        setup-command: sudo gem install bundler && sudo bundle install
+        command: rspec spec/part3_spec.rb
+        timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        PART-3_RESULTS: "${{steps.part-3.outputs.result}}"
         PART-1_RESULTS: "${{steps.part-1.outputs.result}}"
         PART-2_RESULTS: "${{steps.part-2.outputs.result}}"
+        PART-3_RESULTS: "${{steps.part-3.outputs.result}}"
       with:
-        runners: part-3,part-1,part-2
+        runners: part-1,part-2,part-3
