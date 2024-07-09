@@ -20,14 +20,16 @@ Overview
 
 **You may find the [Ruby documentation at ruby-doc.org](https://ruby-doc.org) helpful to have on hand.**
 
-The repo for this assigment follows a fairly standard Ruby convention for codebases: the code
+The repo for this assignment follows a fairly standard Ruby convention for codebases: the code
 files are stored in `lib/` and the test files are stored in `spec/`.
 (We use the RSpec unit-testing framework; if we were using Ruby's default
 framework, known as `Test::Unit`, the test files would be under
 `test/`.)
 
 We've placed "starter code" in `lib/ruby_intro.rb`; when you're all done, you
-can submit this single file to the autograder.
+can submit this single file to GitHub to get your grade from the autograder. You can find these tests in the GitHub repo under Actions>Autograding Tests
+
+
 
 However, you can test each of the 3 parts separately.  The files
 `spec/part[123]_spec.rb` contain RSpec tests for each of the three
@@ -102,9 +104,8 @@ You can check your progress on the all the above by running `rspec spec/part3_sp
 
 # 4. Submission
 
-1. Open this repo in Codespaces and complete the functions in lib/runy_intro.rb
-2. Commit and push your solutions to GitHub (make sure you pass all the tests before you do), double check your repo on GitHub and verify the commit went through.
-3. Submit a picture(s) of your 3 parts passing the RSpec tests!
+1. Open this repo in Codespaces and create a new branch, you can run this command ```git checkout -b rubySolutions```, and complete the functions in lib/ruby_intro.rb using the instructions in this README file.
+2. Commit and push your solutions to the rubySolutions branch, after adding and staging your changes you can use this command to push to the branch ```git push origin rubySolutions```, ***double-check your repo on GitHub***, verify the commit went through, and make sure you pass all the tests. 
 
 
 ## More Challenges
